@@ -1,0 +1,47 @@
+ui.router -> $stateParams
+
+UI-Router Pagination
+
+Use Angular UI-Router to manage a paginated list of data, as well as detailed
+views for those individual items.
+
+MVP:
+
+	*	The data for your app will originate externally.  The Star Wars API is
+		recommended, but you may use a different API, or develop your own.
+
+	*	Manage the interactions with the API with a service.  Also store the
+		data from that API in the service for the rest of your app to watch and
+		access.
+
+	*	Your app should have at least two states:  a list state, and a single
+		item detail state.
+
+	*	The list state should show limited information about your data items in
+		some kind of list.  This must be paginated (only show a limited number on a
+		page, and allow your user to navigate between the pages).  Your list state
+		should use state params to manage which page the user is on.
+
+	*	You can select an item from the list to navigate to that item's detail
+		state.
+
+	*	The detail state should show one item in full detail.  Use state prams
+		to communicate to the state which item needs to be displayed.
+
+Extra Features:
+
+	*	Use a CSS library to neatly display the pagination component (check out
+		Bootstrap's example)
+
+	*	Utilize Caching to store all data received from the API.  When data is
+		cached and accessed properly, the same API call never needs to be made
+		twice.
+
+	*	Instead of using an external API, implement your own CRUD API instead.
+		This data should still be displayed with pagination.
+
+	*	Try to think of other features!  Be creative!
+
+Submission:
+	*	Commit and push to Github, and deploy to Heroku.  Then enter those
+		links into the standard submission form.

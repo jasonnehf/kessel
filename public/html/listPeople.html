@@ -1,0 +1,28 @@
+
+<h1>People</h1>
+<div ng-if="!list" >
+	<div class="spinner">
+	  <div class="bounce1"></div>
+	  <div class="bounce2"></div>
+	  <div class="bounce3"></div>
+	</div>
+</div>
+<ul>
+  <li ng-repeat='per in list'>
+	<a ui-sref="person({person:per.url.split('/').slice(-2,-1).join('')})">{{per.name}}</a></li>
+</ul>
+<nav>
+  <ul class="pagination">
+    <li>
+      <a ui-sref='list((page !== 1) ? {p:page-1} : {p:1})'><span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li ng-repeat='num in pageNumbers track by $index'>
+      <a ui-sref='list({p:num})'> {{num}}</a>
+    </li>
+    <li>
+      <a ui-sref='list((page !== pageNumbers.length) ? {p:page+1} : {p:pageNumbers.length})'><span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
